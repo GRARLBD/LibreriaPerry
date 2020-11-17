@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.mycompany.libreria.gral.system.model.Entrada" 
+           table="Entrada">
+        
+        <id name="id" type="java.lang.Integer">
+            <column name="id_ent_inv" />
+            <generator class="increment" />
+        </id>
+        
+        <many-to-one name="inventario" 
+                     column="id_inventario"
+                     class="com.mycompany.libreria.gral.system.model.Inventario" 
+                     lazy="false">
+        </many-to-one>
+        
+        <property name="cantidadEntrada" type="java.lang.Integer">
+            <column name="cant" />
+        </property>
+        
+        <property name="precioCosto" type="java.math.BigDecimal">
+            <column name="p_costo" />
+        </property>
+        
+        <property name="precioVenta" type="java.math.BigDecimal">
+            <column name="p_venta" />
+        </property>
+        
+        <property name="totalCosto" type="java.math.BigDecimal">
+            <column name="total_costo" />
+        </property>
+        
+        <property name="totalVenta" type="java.math.BigDecimal">
+            <column name="total_venta" />
+        </property>
+        
+        <property name="totalGanancia" type="java.math.BigDecimal">
+            <column name="total_ganancia" />
+        </property>
+        
+        <property name="fechaEntrada" type="java.util.Date" >
+            <column name="fecha" />
+        </property>
+        
+        <property name="estado" type="boolean">
+            <column name = "estado"/>
+        </property>
+    </class>
+</hibernate-mapping>

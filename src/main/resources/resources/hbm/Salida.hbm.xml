@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.mycompany.libreria.gral.system.model.Salida" table="Salida">
+      
+        <id name="id" type="java.lang.Integer">
+            <column name="id_sal_inv"/>
+            <generator class="increment"/>
+        </id>
+        
+        <property name="codigo" type="string">
+            <column name="codigo" />
+        </property>
+        
+        <many-to-one 
+                     class="com.mycompany.libreria.gral.system.model.Inventario" 
+                     column="id_inventario" 
+                     lazy="false" 
+                     name="inventario">
+        </many-to-one>
+        
+        <many-to-one cascade="all" 
+                     class="com.mycompany.libreria.gral.system.model.Oferta" 
+                     column="id_oferta" 
+                     lazy="false" 
+                     name="oferta">
+        </many-to-one>
+        
+        <property name="descripcion" type="string">
+            <column name="descripcion" />
+        </property>
+        
+        <property name="cant" type="java.lang.Integer">
+            <column name="cant"/>
+        </property>
+        
+        <property name="pCosto" type="java.math.BigDecimal">
+            <column name="precio_costo"/>
+        </property>
+        
+        <property name="totalCosto" type="java.math.BigDecimal">
+            <column name="total_costo"/>
+        </property>
+        
+        <property name="unidOf" type="java.lang.Integer">
+            <column name="unid_of"/>
+        </property>
+        
+        <property name="pVenta" type="java.math.BigDecimal">
+            <column name="precio_venta"/>
+        </property>
+        
+        <property name="totalVenta" type="java.math.BigDecimal">
+            <column name="total_venta"/>
+        </property>
+        
+        <property name="totalGanancia" type="java.math.BigDecimal">
+            <column name="total_ganancia"/>
+        </property>
+        
+        <property name="fechaSalida" type="java.util.Date">
+            <column name="fecha"/>
+        </property>
+        
+        <property name="estado" type="boolean">
+            <column name = "estado"/>
+        </property>
+        
+        <property name="regRap" type="boolean">
+            <column name = "reg_rap"/>
+        </property>
+    </class>
+</hibernate-mapping>

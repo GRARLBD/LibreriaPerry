@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="FichaCodigos" pageWidth="595" pageHeight="842" whenNoDataType="BlankPage" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3e4ba309-c498-4e79-894a-7dc160ac7980">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="36"/>
+	<parameter name="LISTA_CODIGO_PRODUCTO" class="java.util.List">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="producto" class="com.mycompany.libreria.gral.system.model.Producto">
+		<fieldDescription><![CDATA[producto]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="284" splitType="Immediate">
+			<rectangle>
+				<reportElement x="0" y="0" width="368" height="284" uuid="42ee2c0d-e91b-45b9-b85a-5f6d1a4cb438"/>
+			</rectangle>
+			<componentElement>
+				<reportElement x="15" y="221" width="254" height="40" uuid="00276067-5217-48e3-9fb8-5a74f22eb86e"/>
+				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code128" drawText="true" checksumRequired="false">
+					<jr:codeExpression><![CDATA[$F{producto}.getCodigo()]]></jr:codeExpression>
+				</jr:barbecue>
+			</componentElement>
+			<textField>
+				<reportElement x="15" y="263" width="353" height="20" uuid="2d122943-39f8-4809-b8d6-760c33d473b6"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{producto}.getDescripcion()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="15" y="0" width="100" height="20" uuid="6c881ef2-1165-48b3-86d3-546d73faa6ab"/>
+				<text><![CDATA[COD LOTE:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="16" y="20" width="339" height="187" uuid="80883c57-096c-49ba-8738-f25c612df8de"/>
+				<textElement textAlignment="Center">
+					<font size="145" isBold="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{producto}.getCodigoLote()]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="50">
+			<textField>
+				<reportElement x="531" y="30" width="24" height="20" uuid="67dc89e6-09bf-462b-a52e-65a3f9c6a286"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

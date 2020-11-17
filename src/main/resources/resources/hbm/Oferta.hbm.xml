@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name = "com.mycompany.libreria.gral.system.model.Oferta" table="Oferta">
+        <id name="id" type="int">
+            <column name="id_oferta" />
+            <generator class="increment" />
+        </id>
+        
+        <property name="codigoLote" type="string">
+            <column name="codigo_lote" />
+        </property>
+        
+        <property name="codigo" type="string">
+            <column name="codigo" />
+        </property>
+        
+        <property name="descripcion" type="string">
+            <column name="descripcion" />
+        </property>
+        
+        <property name="unidOfert" type="int">
+            <column name="unid_ofert" />
+        </property>
+
+        <property name="precioVenta" type="java.math.BigDecimal">
+            <column name="precio_venta"/>
+        </property>
+        
+        <property name="totalVenta" type="java.math.BigDecimal">
+            <column name="total_venta"/>
+        </property>
+        
+        <property name="totalGanancia" type="java.math.BigDecimal">
+            <column name="total_ganancia"/>
+        </property>
+        
+        <property name="estado" type="boolean">
+            <column name="estado"/>
+        </property>
+    </class>
+</hibernate-mapping>

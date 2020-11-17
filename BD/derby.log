@@ -1,0 +1,21 @@
+Sun Dec 15 20:34:24 ART 2019 : Servidor de red Apache Derby: Se ha iniciado 10.11.1.2 - (1629631) y está listo para aceptar las conexiones en el puerto 1527
+----------------------------------------------------------------
+Sun Dec 15 20:34:25 ART 2019:
+ Iniciando instancia a816c00e-016f-0be9-b9fc-000054a7388f de Derby, versión The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): 
+en el directorio de base de datos C:\Users\Kevin\Documents\NetBeansProjects\Libreria-GRAL-SYSTEM\BD\libreria con el cargador de clases sun.misc.Launcher$AppClassLoader@1d44bcfa
+Cargado desde file:/C:/Program%20Files/Java/jdk1.8.0_151/db/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_151-b12
+user.dir=C:\Program Files\Java\jdk1.8.0_151\db
+os.name=Windows 8.1
+os.arch=amd64
+os.version=6.3
+derby.system.home=C:\Users\Kevin\Documents\NetBeansProjects\Libreria-GRAL-SYSTEM\BD
+Cargador de clases de base de datos iniciado - derby.database.classpath=''
+----------------------------------------------------------------
+Sun Dec 15 20:34:46 ART 2019:
+Cerrando la instancia a816c00e-016f-0be9-b9fc-000054a7388f en el directorio de base de datos C:\Users\Kevin\Documents\NetBeansProjects\Libreria-GRAL-SYSTEM\BD\libreria con cargador de clases sun.misc.Launcher$AppClassLoader@1d44bcfa
+Sun Dec 15 20:34:46 ART 2019 Thread[DRDAConnThread_3,5,main] (DATABASE = libreria), (DRDAID = {2}), Cierre de la base de datos 'libreria'.
+----------------------------------------------------------------
+Tue Dec 17 01:59:38 ART 2019: cerrando motor de Derby
+----------------------------------------------------------------

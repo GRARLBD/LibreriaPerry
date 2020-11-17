@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.mycompany.libreria.gral.system.model.Producto" table="Producto">
+        
+        <id name="id" type="java.lang.Integer">
+            <column name="id_producto" />
+            <generator class="increment" />
+        </id>
+        
+        <property name="codigoLote" type="string">
+            <column name="codigo_lote" />
+        </property>
+        
+        <property name="codigo" type="string">
+            <column name="codigo" />
+        </property>
+        
+        <property name="descripcion" type="string">
+            <column name="descripcion" />
+        </property>
+        
+        <property name="rutaImagen" type="string">
+            <column name="ruta_imagen" />
+        </property>
+        
+        <property name="stock" type="int">
+            <column name="stock" />
+        </property>
+        
+        <property name="codigoBusq1" type="string">
+            <column name="codigo_busq_1" />
+        </property>
+        
+        <property name="codigoBusq2" type="string">
+            <column name="cod_busq_2" />
+        </property>
+        
+        <property name="codigoBusq3" type="string">
+            <column name="cod_busq_3" />
+        </property>
+        
+        <bag cascade="all" lazy="false" name="listaCodigo">
+            <key column="id_producto" not-null="true"/>
+            <one-to-many class="com.mycompany.libreria.gral.system.model.Codigo"/>
+        </bag>
+        
+        <property name="estadoSeguro" type="boolean">
+            <column name="col_seguro"/>
+        </property>
+    </class>
+</hibernate-mapping>

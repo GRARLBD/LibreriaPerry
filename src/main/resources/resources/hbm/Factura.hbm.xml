@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.mycompany.libreria.gral.system.model.Factura" table="Factura">
+        
+        <id name="id" type="java.lang.Integer">
+            <column name="id_factura" />
+            <generator class="increment" />
+        </id>
+        
+        <property name="codigoFactura" type="string">
+            <column name="codigo_factura" />
+        </property>
+        
+        <property name="cliente" type="string">
+            <column name="cliente" />
+        </property>
+        
+        <property name="fecha" type="java.util.Date" >
+            <column name="fecha" />
+        </property>
+        
+        <bag cascade="all" lazy="false" name="listaSalidas">
+            <key column="id_factura" not-null="true"/>
+            <one-to-many class="com.mycompany.libreria.gral.system.model.Salida"/>
+        </bag>
+        
+        <property name="totalFactura" type="string">
+            <column name="total_factura" />
+        </property>
+        
+        <property name="vuelto" type="string">
+            <column name="vuelto" />
+        </property>
+        
+        <property name="pago" type="string">
+            <column name="pago" />
+        </property>
+        <property name="estado" type="boolean">
+            <column name = "estado"/>
+        </property>
+    </class>
+</hibernate-mapping>

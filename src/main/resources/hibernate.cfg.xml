@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/libreria?&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=America/Argentina/Jujuy</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">root</property>
+    <property name="hibernate.connection.characterEncoding">utf8</property>
+    <property name="hibernate.show_sql">false</property>
+    <!-- JDBC connection pool (use the built-in) -->
+    <property name="connection.pool_size">1</property>
+    <!-- Enable Hibernate's automatic session context management -->
+    <property name="current_session_context_class">thread</property>
+    <property name="hibernate.connection.autocommit">true</property>
+    
+    
+    <mapping resource="resources/hbm/Entrada.hbm.xml"/>
+    <mapping resource="resources/hbm/Inventario.hbm.xml"/>
+    <mapping resource="resources/hbm/Oferta.hbm.xml"/>
+    <mapping resource="resources/hbm/Producto.hbm.xml"/>
+    <mapping resource="resources/hbm/Factura.hbm.xml"/>
+    <mapping resource="resources/hbm/Salida.hbm.xml"/>
+    <mapping resource="resources/hbm/Codigo.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

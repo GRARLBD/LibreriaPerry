@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="fichaEmpresa" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3e4ba309-c498-4e79-894a-7dc160ac7980">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<subDataset name="dataset1" uuid="c237071d-dee0-40ab-93f7-1582ae09e0e7">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="inventario" class="com.mycompany.libreria.gral.system.model.Inventario">
+			<fieldDescription><![CDATA[inventario]]></fieldDescription>
+		</field>
+		<field name="cant" class="java.lang.Integer">
+			<fieldDescription><![CDATA[cant]]></fieldDescription>
+		</field>
+		<field name="class" class="java.lang.Class">
+			<fieldDescription><![CDATA[class]]></fieldDescription>
+		</field>
+		<field name="codigo" class="java.lang.String">
+			<fieldDescription><![CDATA[codigo]]></fieldDescription>
+		</field>
+		<field name="codigoM2" class="java.lang.String">
+			<fieldDescription><![CDATA[codigoM2]]></fieldDescription>
+		</field>
+		<field name="descripcion" class="java.lang.String">
+			<fieldDescription><![CDATA[descripcion]]></fieldDescription>
+		</field>
+		<field name="descripcionM2" class="java.lang.String">
+			<fieldDescription><![CDATA[descripcionM2]]></fieldDescription>
+		</field>
+		<field name="estado" class="java.lang.Boolean">
+			<fieldDescription><![CDATA[estado]]></fieldDescription>
+		</field>
+		<field name="fechaSalida" class="java.util.Date">
+			<fieldDescription><![CDATA[fechaSalida]]></fieldDescription>
+		</field>
+		<field name="id" class="java.lang.Integer">
+			<fieldDescription><![CDATA[id]]></fieldDescription>
+		</field>
+		<field name="imagen" class="java.lang.String">
+			<fieldDescription><![CDATA[imagen]]></fieldDescription>
+		</field>
+		<field name="inventario_1" class="com.mycompany.libreria.gral.system.model.Inventario">
+			<fieldDescription><![CDATA[inventario]]></fieldDescription>
+		</field>
+		<field name="oferta" class="com.mycompany.libreria.gral.system.model.Oferta">
+			<fieldDescription><![CDATA[oferta]]></fieldDescription>
+		</field>
+		<field name="pCosto" class="java.math.BigDecimal">
+			<fieldDescription><![CDATA[pCosto]]></fieldDescription>
+		</field>
+		<field name="pVenta" class="java.math.BigDecimal">
+			<fieldDescription><![CDATA[pVenta]]></fieldDescription>
+		</field>
+		<field name="regRap" class="java.lang.Boolean">
+			<fieldDescription><![CDATA[regRap]]></fieldDescription>
+		</field>
+		<field name="totalCosto" class="java.math.BigDecimal">
+			<fieldDescription><![CDATA[totalCosto]]></fieldDescription>
+		</field>
+		<field name="totalGanancia" class="java.math.BigDecimal">
+			<fieldDescription><![CDATA[totalGanancia]]></fieldDescription>
+		</field>
+		<field name="totalVenta" class="java.math.BigDecimal">
+			<fieldDescription><![CDATA[totalVenta]]></fieldDescription>
+		</field>
+		<field name="unidOf" class="java.lang.Integer">
+			<fieldDescription><![CDATA[unidOf]]></fieldDescription>
+		</field>
+		<field name="class_1" class="java.lang.Class">
+			<fieldDescription><![CDATA[class]]></fieldDescription>
+		</field>
+		<field name="pVentaStr" class="java.lang.String">
+			<fieldDescription><![CDATA[pVentaStr]]></fieldDescription>
+		</field>
+		<field name="pTotalStr" class="java.lang.String">
+			<fieldDescription><![CDATA[pTotalStr]]></fieldDescription>
+		</field>
+		<field name="pCostoStr" class="java.lang.String">
+			<fieldDescription><![CDATA[pCostoStr]]></fieldDescription>
+		</field>
+	</subDataset>
+	<parameter name="LISTA_UTILES" class="java.util.List">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="TOTAL_LISTA" class="java.lang.String"/>
+	<parameter name="TIEMPO" class="java.lang.String"/>
+	<parameter name="PAGO" class="java.lang.String"/>
+	<parameter name="APNOM" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="109" splitType="Stretch">
+			<staticText>
+				<reportElement x="11" y="3" width="198" height="33" uuid="05e0ed3e-9178-4d7e-b254-1e4c35c3d959"/>
+				<textElement>
+					<font fontName="Serif" size="24"/>
+				</textElement>
+				<text><![CDATA[Lista de Compras]]></text>
+			</staticText>
+			<line>
+				<reportElement x="13" y="36" width="529" height="1" uuid="bfe3eb8b-813e-4a9a-8225-05ab3d95d003"/>
+			</line>
+			<staticText>
+				<reportElement x="11" y="66" width="96" height="20" uuid="203f2292-dd14-44a3-afe8-ec274e475970"/>
+				<textElement>
+					<font size="14" isBold="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Fecha y hora:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="112" y="66" width="191" height="20" uuid="4a2012e0-5d03-4d6d-a97a-a81c53204d72"/>
+				<textElement verticalAlignment="Middle">
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TIEMPO}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="12" y="46" width="47" height="20" uuid="f9c3cc20-ac47-4ff4-ae60-1d9e6f6adcf6"/>
+				<textElement>
+					<font size="14" isBold="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[A y N:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="59" y="46" width="191" height="20" uuid="a68d087d-f4d4-45bf-9e48-e9598b2a05e9"/>
+				<textElement verticalAlignment="Middle">
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{APNOM}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="13" y="89" width="71" height="20" uuid="725177f3-55be-4814-9235-c0f6712be75c"/>
+				<textElement>
+					<font size="14" isBold="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Pagó con:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="84" y="89" width="191" height="20" uuid="9574e553-ecbe-4145-be40-f2995e77f759"/>
+				<textElement verticalAlignment="Middle">
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PAGO}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="141" splitType="Stretch">
+			<componentElement>
+				<reportElement positionType="Float" x="11" y="33" width="529" height="16" uuid="a39b414d-307b-4530-a724-756f9ecebd28"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="dataset1" uuid="6306960a-280a-41ce-891d-1ccbd26db9df">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{LISTA_UTILES})]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="16" width="529">
+						<textField>
+							<reportElement x="4" y="1" width="100" height="15" uuid="9915434d-db3a-42b5-9706-29e81df55aca"/>
+							<textFieldExpression><![CDATA[$F{descripcionM2}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="387" y="1" width="43" height="15" uuid="1aefbe0f-b26b-4fc2-a741-83b848355ab1"/>
+							<textFieldExpression><![CDATA[$F{cant}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="296" y="0" width="82" height="15" uuid="6da33019-5a2c-4ad6-b48f-3d16309d749f"/>
+							<textFieldExpression><![CDATA[$F{pVentaStr}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="441" y="0" width="82" height="15" uuid="4de518b7-fc00-4352-b163-dbfbbb123f07"/>
+							<textFieldExpression><![CDATA[$F{pTotalStr}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="230" y="0" width="56" height="15" uuid="bd8d7064-7010-4f70-a02d-bff5a38f1355"/>
+							<textFieldExpression><![CDATA[$F{unidOf} + ",0"]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<line>
+				<reportElement x="15" y="29" width="529" height="1" uuid="bfe3eb8b-813e-4a9a-8225-05ab3d95d003"/>
+			</line>
+			<staticText>
+				<reportElement x="11" y="6" width="230" height="20" uuid="203f2292-dd14-44a3-afe8-ec274e475970"/>
+				<textElement>
+					<font size="14" isBold="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Descripción]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="397" y="6" width="43" height="20" uuid="417899df-ef08-439c-abe7-ce3e8e734123"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Cant.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="306" y="6" width="82" height="20" uuid="417899df-ef08-439c-abe7-ce3e8e734123"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Precio unit.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="452" y="6" width="83" height="20" uuid="417899df-ef08-439c-abe7-ce3e8e734123"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Sub-total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="454" y="51" width="80" height="20" uuid="4d7d1f1c-c493-45ec-8344-6c7659b71417"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total:]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="Float" x="452" y="71" width="82" height="20" uuid="84497cb8-69d9-4077-aae6-9de0da8dee47"/>
+				<textFieldExpression><![CDATA[$P{TOTAL_LISTA}.toString()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="244" y="6" width="53" height="20" uuid="33ab009a-fad2-4145-aa88-e8e18f546fab"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Unid. of.]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>
